@@ -11,7 +11,7 @@
   /* font setting */
   --font-montserrat: "Montserrat", sans-serif;
   --font-poppins: "Poppins", sans-serif;
-  
+
   /* color Palette Simon */
   --color-SMcream: #FBFFF1;
   --color-SMmint: #CEE5D5;
@@ -33,11 +33,4 @@
 
 .font-poppins {
   font-family: var(--font-poppins);
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-height: 100vh;
 }
