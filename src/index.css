@@ -26,6 +26,15 @@
 }
 
 
+/* FontType SIMON */
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
 body {
   margin: 0;
   display: flex;
