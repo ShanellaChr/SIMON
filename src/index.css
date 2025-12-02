@@ -14,7 +14,7 @@
 }
 
 /* TAILWIND V4 CUSTOM THEME */
-@theme {
+@theme{
   /* CUSTOM COLORS */
   --color-SMcream: #FBFFF1;
   --color-SMmint: #CEE5D5;
@@ -30,9 +30,11 @@
   /* CUSTOM FONTS */
   --font-montserrat: var(--font-montserrat);
   --font-poppins: var(--font-poppins);
+
 }
 
 body {
   margin: 0;
   padding: 0;
 }
+

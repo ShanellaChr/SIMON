@@ -6,13 +6,13 @@ import SIMCard from './pages/SIMCard'
 import Geo from './pages/Geo'
 import Report from './pages/Report'
 
+
 //import components
 import Nav from './components/Nav'
 
 function App() {
   return (
     <div>
-      <Nav />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/monitoring-summary" element={<Monitoring />} />
