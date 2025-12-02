@@ -8,11 +8,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* font setting */
+  /* font variables */
   --font-montserrat: "Montserrat", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+}
 
-  /* color Palette Simon */
+/* TAILWIND V4 CUSTOM THEME */
+@theme {
+  /* CUSTOM COLORS */
   --color-SMcream: #FBFFF1;
   --color-SMmint: #CEE5D5;
   --color-SMaqua: #A9D3C5;
@@ -23,14 +26,13 @@
   --color-SMtsel: #E05E70;
   --color-SMxl: #8DB9F5;
   --color-SMisat: #FFC766;
+
+  /* CUSTOM FONTS */
+  --font-montserrat: var(--font-montserrat);
+  --font-poppins: var(--font-poppins);
 }
 
-
-/* FontType SIMON */
-.font-montserrat {
-  font-family: var(--font-montserrat);
-}
-
-.font-poppins {
-  font-family: var(--font-poppins);
+body {
+  margin: 0;
+  padding: 0;
 }
