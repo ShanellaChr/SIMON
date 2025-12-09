@@ -1,7 +1,9 @@
-export default function MonitoringSummary() {
+import MainLayout from "../layouts/MainLayout";
+
+export default function Summary() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Monitoring Summary</h1>
-    </div>
-  )
+    <MainLayout>
+      <h1 className="text-3xl font-bold text-SMnavy mb-6">SUMMARY</h1>
+    </MainLayout>
+  );
 }

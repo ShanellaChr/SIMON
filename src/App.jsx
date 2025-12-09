@@ -19,6 +19,7 @@ function App() {
         <Route path="/simcard" element={<SIMCard />} />
         <Route path="/geo" element={<Geo />} />
         <Route path="/report" element={<Report />} />
+        <Route path="/nav" element={<Nav />} />
       </Routes>
     </div>
   );
