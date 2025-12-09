@@ -6,9 +6,10 @@ import SIMCard from './pages/SIMCard'
 import Geo from './pages/Geo'
 import Report from './pages/Report'
 
-
 //import components
 import Nav from './components/Nav'
+import Dashboard from "./pages/coba1";
+import Analytics from "./pages/Coba2";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="/geo" element={<Geo />} />
         <Route path="/report" element={<Report />} />
         <Route path="/nav" element={<Nav />} />
+        <Route path="/coba1" element={<Dashboard />} />
+        <Route path="/coba2" element={<Analytics />} />
       </Routes>
     </div>
   );
