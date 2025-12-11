@@ -8,7 +8,7 @@ export default function MainLayout({ children }) {
       <Nav />
 
       {/* Isi halaman */}
-      <div className="flex-1 bg-SMcream p-6 overflow-auto">
+      <div className="flex-1 bg-SMcream ml-2 overflow-auto font-montserrat">
         {children}
       </div>
 

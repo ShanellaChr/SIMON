@@ -1,4 +1,4 @@
-import LineBarCoba from "../components/charts/LineBarCoba";
+import LineBarCoba from "../components/charts/AreaChart";
 
 const analyticsData = [
   { name: "A", uv: 120, pv: 80, amt: 90 },
