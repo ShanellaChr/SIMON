@@ -1,10 +1,6 @@
-export default function Backdrop({width, height,children}){
+export default function Backdrop({className ="", children}){
     return (
-        <div style={{
-            width: width,
-            height: height
-        }}
-        className="bg-white backdrop-blur-md rounded-lg p-2 drop-shadow-lg ">
+        <div className={`${className} bg-white backdrop-blur-md rounded-lg p-2 drop-shadow-lg`}>
             {children}
         </div>
     );

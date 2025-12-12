@@ -21,7 +21,7 @@ export default function Login() {
             />
             <form action="#" method="POST" className="space-y-6">
               <div>
-                <label className="block text-18 font-medium text-SMnavy font-poppins">
+                <label className="block text-[18px] font-medium text-SMnavy font-poppins">
                   Username
                 </label>
                 <div className="mt-2">
