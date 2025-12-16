@@ -2,6 +2,7 @@ import MainLayout from "../layouts/MainLayout";
 import Backdrop from "../components/Backdrop";
 import PieChartComponent from "../components/charts/PieChart";
 import BarChartComponent from "../components/charts/BarChart";
+import HorizontalBarChart from "../components/charts/BarChartHorizontal";
 
 const dataBilling = [
   { name: "Telkomsel", value: 302250},
@@ -20,6 +21,12 @@ const dataIMEI = [
     hasImei: 145876,
     noImei: 56832,
   },
+];
+
+const dataQuotaUsage = [
+  { name: "Telkomsel", value: 45 },
+  { name: "XL", value: 41.41 },
+  { name: "Indosat", value: 63.4 },
 ];
 
 export default function Summary() {
@@ -51,7 +58,7 @@ export default function Summary() {
 
           <Backdrop className="flex-1">
             <div className="flex justify-center">
-              <h1 className="font-bold text-xl ">SIM Card IMEI Statistic</h1>
+              <h1 className="font-bold text-xl">SIM Card IMEI Statistic</h1>
             </div>
               <BarChartComponent data={dataIMEI} />
           </Backdrop>
@@ -61,13 +68,14 @@ export default function Summary() {
         <div className="flex flex-col gap-3 h-full">
           <Backdrop className="flex-1">
             <div className="flex justify-center">
-              <h1 className="font-bold text-xl ">Quota Usage</h1>
+              <h1 className="font-bold text-xl">Quota Usage</h1>
             </div>
+            <HorizontalBarChart data={dataQuotaUsage} />
           </Backdrop>
 
           <Backdrop className="flex-1">
             <div className="flex justify-center">
-              <h1 className="font-bold text-xl ">Network Type</h1>
+              <h1 className="font-bold text-xl">Network Type</h1>
             </div>
 
           </Backdrop>

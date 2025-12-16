@@ -4,10 +4,10 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer
 
 const BarChartComponent = ({ data }) => {
     return (
-        <ResponsiveContainer width="100%" height={295}>
+        <ResponsiveContainer width="100%" height={210}>
             <BarChart data={data}
                 margin={{ top: 10}}>
-                <CartesianGrid strokeDasharray="5 5" />
+                <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
                     dataKey="name"
                     tick={{
