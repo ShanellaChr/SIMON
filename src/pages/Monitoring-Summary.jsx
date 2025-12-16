@@ -3,11 +3,12 @@ import Backdrop from "../components/Backdrop";
 import PieChartComponent from "../components/charts/PieChart";
 import BarChartComponent from "../components/charts/BarChart";
 import HorizontalBarChart from "../components/charts/BarChartHorizontal";
+import MonthYearDropdown from "../components/MonthYearDropdown";
 
 const dataBilling = [
-  { name: "Telkomsel", value: 302250},
-  { name: "XL", value: 200003},
-  { name: "Indosat", value: 105500}
+  { name: "Telkomsel", value: 302250 },
+  { name: "XL", value: 200003 },
+  { name: "Indosat", value: 105500 }
 ];
 
 const dataIMEI = [
@@ -60,16 +61,23 @@ export default function Summary() {
             <div className="flex justify-center">
               <h1 className="font-bold text-xl">SIM Card IMEI Statistic</h1>
             </div>
-              <BarChartComponent data={dataIMEI} />
+            <BarChartComponent data={dataIMEI} />
           </Backdrop>
         </div>
 
         {/* right widget */}
         <div className="flex flex-col gap-3 h-full">
           <Backdrop className="flex-1">
-            <div className="flex justify-center">
-              <h1 className="font-bold text-xl">Quota Usage</h1>
+            <div className="relative flex items-center">
+              <h1 className="mx-auto font-bold text-xl">
+                Quota Usage
+              </h1>
+
+              <div className="absolute right-0">
+                <MonthYearDropdown />
+              </div>
             </div>
+
             <HorizontalBarChart data={dataQuotaUsage} />
           </Backdrop>
 
