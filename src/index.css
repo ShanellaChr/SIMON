@@ -26,6 +26,8 @@
   --color-SMtsel: #E05E70;
   --color-SMxl: #8DB9F5;
   --color-SMisat: #FFC766;
+  --color-SMbarblue: #6fa3b0;
+  --color-SMbargreen: #73986b;  
 
   /* CUSTOM FONTS */
   --font-montserrat: var(--font-montserrat);

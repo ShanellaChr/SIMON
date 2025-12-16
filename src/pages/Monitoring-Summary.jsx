@@ -1,11 +1,25 @@
 import MainLayout from "../layouts/MainLayout";
 import Backdrop from "../components/Backdrop";
 import PieChartComponent from "../components/charts/PieChart";
+import BarChartComponent from "../components/charts/BarChart";
 
 const dataBilling = [
   { name: "Telkomsel", value: 302250},
   { name: "XL", value: 200003},
   { name: "Indosat", value: 105500}
+];
+
+const dataIMEI = [
+  {
+    name: "In Billing",
+    hasImei: 531403,
+    noImei: 323455,
+  },
+  {
+    name: "In Testing",
+    hasImei: 145876,
+    noImei: 56832,
+  },
 ];
 
 export default function Summary() {
@@ -39,6 +53,7 @@ export default function Summary() {
             <div className="flex justify-center">
               <h1 className="font-bold text-xl ">SIM Card IMEI Statistic</h1>
             </div>
+              <BarChartComponent data={dataIMEI} />
           </Backdrop>
         </div>
 

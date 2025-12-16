@@ -30,7 +30,7 @@ const PieChartComponent = ({ data }) => {
                     cx="50%"
                     cy="50%"
                     innerRadius="50%"
-                    outerRadius="85%"
+                    outerRadius="90%"
                     strokeWidth={0}
                     style={{ filter: "url(#innerShadow)" }}
                     label={(props) => CustomPercentageLabel(props, total)}
