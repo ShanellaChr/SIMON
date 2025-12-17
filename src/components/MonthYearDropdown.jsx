@@ -32,6 +32,10 @@ const MonthYearDropdown = () => {
         onChange={(e) => setYear(e.target.value)}
         className="p-2 rounded-r-md text-[12px] bg-SMaqua text-SMnavy font-semibold drop-shadow-2xl"
       >
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
         <option>2024</option>
         <option>2025</option>
         <option>2026</option>
