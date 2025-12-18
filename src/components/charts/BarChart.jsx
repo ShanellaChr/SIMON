@@ -28,6 +28,7 @@ const BarChartComponent = ({ data }) => {
                     wrapperStyle={{
                         fontSize: "12px",
                         fontWeight: 600,
+                        marginBottom: "5px",
                         color: "var(--color-SMnavy)",
                     }}
                 />
