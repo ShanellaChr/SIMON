@@ -1,6 +1,6 @@
-export default function Backdrop({className ="", children}){
+export default function Backdrop({children}){
     return (
-        <div className={`${className} bg-white backdrop-blur-md rounded-lg p-2 drop-shadow-lg`}>
+        <div className={`bg-white backdrop-blur-md rounded-lg drop-shadow-lg`}>
             {children}
         </div>
     );

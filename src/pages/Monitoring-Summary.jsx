@@ -49,19 +49,19 @@ const dataNetworkType = [
 
 const dataSignalStrength = [
   {
-    name: "Excellent <-90 dBm",
+    name: "Excellent <-90dBm",
     Telkomsel: 22,
     XL: 30,
     Indosat: 47,
   },
   {
-    name: "Moderate \n -91 ~ -99 dBm",
+    name: "Moderate -91~-99dBm",
     Telkomsel: 88,
     XL: 75,
     Indosat: 49,
   },
   {
-    name: "Poor\n>-99 dBm",
+    name: "Poor >-99dBm",
     Telkomsel: 22,
     XL: 44,
     Indosat: 5,
@@ -71,7 +71,7 @@ const dataSignalStrength = [
 export default function Summary() {
   return (
     <MainLayout>
-      <h1 className="font-poppins font-extrabold text-2xl ">SUMMARY</h1>
+      <h1 className="font-poppins font-extrabold text-2xl m-2">SUMMARY</h1>
       <div className="flex-1 grid grid-cols-2 gap-3 ml-1 mr-2 ">
         {/* left widget */}
         <div className="flex flex-col gap-3 h-full">
@@ -105,30 +105,30 @@ export default function Summary() {
 
         {/* right widget */}
         <div className="flex flex-col gap-3 h-full">
-          <Backdrop className="flex-1">
-            <div className="relative flex items-center ">
+          <Backdrop>
+            <div className="flex items-center mb-3">
               <h1 className="mx-auto font-bold text-xl">
                 Quota Usage
               </h1>
-              <div className="absolute right-0">
-                <MonthYearDropdown />
-              </div>
+            </div>
+            <div className="absolute top-5 right-0 z-1">
+              <MonthYearDropdown />
             </div>
             <HorizontalBarChart data={dataQuotaUsage} />
           </Backdrop>
 
-          <Backdrop className="flex-1">
+          <Backdrop>
             <div className="flex justify-center">
               <h1 className="font-bold text-xl">Network Type</h1>
             </div>
-            <StackedBarChart data={dataNetworkType}/>
+            <StackedBarChart data={dataNetworkType} />
           </Backdrop>
 
-          <Backdrop className="flex-1">
+          <Backdrop>
             <div className="flex justify-center">
               <h1 className="font-bold text-xl ">Signal Strength</h1>
             </div>
-            <StackedBarChart data={dataSignalStrength}/>
+            <StackedBarChart data={dataSignalStrength} />
           </Backdrop>
         </div>
 

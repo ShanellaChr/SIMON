@@ -20,7 +20,7 @@ const providerLogoMap = {
 const StackedBarChart = ({ data }) => {
     return (
         <div className="w-full">
-            <ResponsiveContainer width="100%" height={140}>
+            <ResponsiveContainer width="100%" height={180}>
                 <BarChart
                     data={data}
                     layout="vertical"
@@ -90,7 +90,7 @@ const StackedBarChart = ({ data }) => {
 
 const ProviderLegend = () => {
     return (
-        <div className="flex justify-center gap-2 mt-4">
+        <div className="flex justify-center gap-2 mt-0 mb-5">
             {/* TELKOMSEL */}
             <div className="flex items-center gap-2">
                 <div
@@ -102,8 +102,6 @@ const ProviderLegend = () => {
                     alt="Telkomsel"
                     className="h-4"
                 />
-
-
             </div>
 
             {/* XL */}
