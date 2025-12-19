@@ -5,7 +5,6 @@ import BarChartComponent from "../components/charts/BarChart";
 import HorizontalBarChart from "../components/charts/BarChartHorizontal";
 import MonthYearDropdown from "../components/MonthYearDropdown";
 import StackedBarChart from "../components/charts/StackedBarChart";
-import { data } from "react-router-dom";
 
 const dataBilling = [
   { name: "Telkomsel", value: 302250 },
@@ -71,7 +70,7 @@ const dataSignalStrength = [
 export default function Summary() {
   return (
     <MainLayout>
-      <h1 className="font-poppins font-extrabold text-2xl m-2">SUMMARY</h1>
+      <h1 className="font-poppins font-extrabold text-2xl mb-1">SUMMARY</h1>
       <div className="flex-1 grid grid-cols-2 gap-3 ml-1 mr-2 ">
         {/* left widget */}
         <div className="flex flex-col gap-3 h-full">

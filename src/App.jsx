@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from './pages/Login'
 import Monitoring from './pages/Monitoring-Summary'
 import SIMCard from './pages/SIMCard'
+import DetailSIMcard from './pages/DetailSIMCard'
 import Geo from './pages/Geo'
 import Report from './pages/Report'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/monitoring-summary" element={<Monitoring />} />
         <Route path="/simcard" element={<SIMCard />} />
+        <Route path="/detailsimcard" element={<DetailSIMcard />} />
         <Route path="/geo" element={<Geo />} />
         <Route path="/report" element={<Report />} />
         <Route path="/nav" element={<Nav />} />
