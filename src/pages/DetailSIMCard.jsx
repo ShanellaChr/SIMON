@@ -3,6 +3,8 @@ import arrowBackIcon from "../assets/arrowBackIcon.svg";
 import SIMCardHeadUnit from "../components/SIMCardHeadUnit";
 import Backdrop from "../components/Backdrop";
 import DataTable from "../components/DataTable";
+import UsageTrends from "../components/UsageTrends";
+
 
 const headData = {
     ICCID: "896200000416613780",
@@ -14,55 +16,27 @@ const headData = {
 };
 
 const imeiLogColumns = [
-  { key: "before", label: "Before" },
-  { key: "after", label: "After" },
-  { key: "timestamp", label: "Timestamp" },
+    { key: "before", label: "Before" },
+    { key: "after", label: "After" },
+    { key: "timestamp", label: "Timestamp" },
 ];
 
 const imeiLogData = [
-  {
-    before: "359666796195180",
-    after: "3596667961951803",
-    timestamp: "03-10-2005 22:15:00",
-  },
-  {
-    before: "359666796195180",
-    after: "3596667961951802",
-    timestamp: "13-09-2005 09:15:00",
-  },
-  {
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },
-  {
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },
-  {
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },
-  {
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },{
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },{
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },
-  {
-    before: "N/A",
-    after: "3596667961951801",
-    timestamp: "15-09-2005 20:15:00",
-  },
+    {
+        before: "359666796195180",
+        after: "3596667961951803",
+        timestamp: "03-10-2005 22:15:00",
+    },
+    {
+        before: "359666796195180",
+        after: "3596667961951802",
+        timestamp: "13-09-2005 09:15:00",
+    },
+    {
+        before: "N/A",
+        after: "3596667961951801",
+        timestamp: "15-09-2005 20:15:00",
+    },
 ];
 
 
@@ -72,7 +46,7 @@ export default function DetailSIMCard() {
         <MainLayout>
             <div className="relative flex items-center justify-center mt-2">
                 <button type="button" className="absolute left-0 flex items-center h-8 bg-SMnavy text-SMcream rounded-md px-3 text-[16px] font-bold">
-                    <img src={arrowBackIcon} alt="backIcon" className="mr-1 h-4" /> 
+                    <img src={arrowBackIcon} alt="backIcon" className="mr-1 h-4" />
                     Back
                 </button>
                 <h1 className="font-poppins font-extrabold text-2xl text-SMnavy">DETAIL SIM CARD</h1>
@@ -84,14 +58,13 @@ export default function DetailSIMCard() {
             </div>
 
             <div className="flex justify-center gap-4 mt-4">
-
                 {/* SESSION INFO */}
                 <Backdrop className="w-150 flex flex-col">
-                    <div className="flex justify-center py-2">
-                        <h1 className="font-bold text-[18px]">Session Info</h1>
+                    <div className="flex justify-center">
+                        <h1 className="font-bold text-[18px] mt-1">Session Info</h1>
                     </div>
 
-                    <div className="px-4 space-y-1.5 mb-1">
+                    <div className="px-2 space-y-1 mb-1">
                         <div>
                             <h3 className="font-semibold text-SMteal text-[14px]">Session Status</h3>
                             <p className="text-[14px] font-medium">Offline</p>
@@ -133,11 +106,11 @@ export default function DetailSIMCard() {
 
                 {/* IMEI INFO */}
                 <Backdrop className="w-150 flex flex-col">
-                    <div className="flex justify-center py-2">
-                        <h1 className="font-bold text-[18px]">IMEI Info</h1>
+                    <div className="flex justify-center">
+                        <h1 className="font-bold text-[18px] mt-1">IMEI Info</h1>
                     </div>
 
-                    <div className="px-4 space-y-1.5">
+                    <div className="px-2 space-y-1">
                         <div>
                             <h3 className="font-semibold text-SMteal text-[14px]">Current IMEI</h3>
                             <p className="text-[14px] font-medium">Offline</p>
@@ -165,11 +138,11 @@ export default function DetailSIMCard() {
 
                 {/* MERCHANT INFO */}
                 <Backdrop className="w-150 flex flex-col">
-                    <div className="flex justify-center py-2">
-                        <h1 className="font-bold text-[18px]">Merchant Info</h1>
+                    <div className="flex justify-center">
+                        <h1 className="font-bold text-[18px] mt-1">Merchant Info</h1>
                     </div>
 
-                    <div className="px-4 space-y-1.5">
+                    <div className="px-2 space-y-1">
                         <div>
                             <h3 className="font-semibold text-SMteal text-[14px]">Terminal ID</h3>
                             <p className="text-[14px] font-medium">TRM-9876543210</p>
@@ -205,6 +178,14 @@ export default function DetailSIMCard() {
                         </div>
                     </div>
                 </Backdrop>
+            </div>
+
+            <div className="w-full mt-4">
+              <Backdrop>
+                <UsageTrends />
+        
+              </Backdrop>
+
             </div>
         </MainLayout>
     );
