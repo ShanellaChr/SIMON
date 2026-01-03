@@ -13,7 +13,7 @@ export default function DateRangeMonthly({ onSubmit }) {
 
     return (
         <form onSubmit={handleSubmit} className="flex items-center gap-2">
-            <label className="text-[14px] font-semibold">Year</label>
+            <label className="text-[12px] font-semibold">Year</label>
             <select
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
@@ -28,7 +28,7 @@ export default function DateRangeMonthly({ onSubmit }) {
 
             <button
                 type="submit"
-                className="ml-2 px-4 py-1 text-[12px] bg-SMnavy text-SMcream rounded-md border"
+                className="ml-2 px-4 py-1 text-[12px] font-semibold bg-SMnavy text-SMcream rounded-md border"
             >
                 Submit
             </button>
