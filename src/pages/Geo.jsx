@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 export default function Geo() {
   return (
     <MainLayout>
-      <h1 className="text-3xl font-bold text-SMnavy mb-6">GEO</h1>
+      <h1 className="font-poppins font-extrabold text-2xl mb-1">GEO</h1>
     </MainLayout>
   );
 }
