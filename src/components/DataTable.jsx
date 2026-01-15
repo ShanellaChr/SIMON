@@ -1,3 +1,4 @@
+// ini di IMEI INFO Detail SIM Card Page
 export default function DataTable({ columns, data, maxHeight = "300px" }) {
   return (
     <div className="border border-gray-300 rounded-md overflow-hidden bg-white">

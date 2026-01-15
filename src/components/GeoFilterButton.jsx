@@ -1,8 +1,8 @@
 import { useState } from "react";
 import filterIcon from "../assets/filterIcon.svg";
-import FilterTooltip from "./FilterTooltip";
+import FilterTooltip from "./GeoFilterTooltip";
 
-export default function FilterButton() {
+export default function GeoFilterButton() {
   const [open, setOpen] = useState(false);
 
   return (

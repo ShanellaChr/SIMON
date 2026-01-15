@@ -1,9 +1,11 @@
 'use client';
 import searchIcon from "../assets/searchIcon.svg";
 
-export default function SearchBar({ value, onChange, onSearch }) {
+export default function SearchBar({ value, onChange, onSearch, className }) {
+  const defaultClasses = "flex items-center rounded-md overflow-hidden bg-white shadow-[0_2px_5px_rgba(0,0,0,0.07),inset_0_1px_3px_rgba(0,0,0,0.15)]";
+  const finalClassName = className || "w-[420px]";
   return (
-    <div className="flex items-center w-[420px] rounded-md overflow-hidden bg-white shadow-[0_2px_5px_rgba(0,0,0,0.07),inset_0_1px_3px_rgba(0,0,0,0.15)]">
+    <div className={`${defaultClasses} ${finalClassName}`}>
       <input
         type="text"
         placeholder="Search by ICCID / MSISDN / IMEI"

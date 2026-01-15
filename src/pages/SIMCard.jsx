@@ -2,6 +2,7 @@ import MainLayout from "../layouts/MainLayout";
 import SearchBar from "../components/SearchBar";
 import FilterButton from "../components/FilterButton";
 import SimCardTable from "../components/SIMCardTable";
+import { useState } from "react";
 
 const simCardData = [
   {
@@ -37,11 +38,16 @@ const simCardData = [
 ];
 
 export default function SIMCard() {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearch = () => {
+    console.log("Searching for:", searchValue);
+  };
   return (
     <MainLayout>
       <h1 className="font-poppins font-extrabold text-2xl mb-1">SIM CARD</h1>
       <div className="flex items-center gap-4 mb-4">
-        <SearchBar />
+        <SearchBar value={searchValue} onChange={setSearchValue} onSearch={handleSearch} />
         <FilterButton />
       </div>
       <div>
