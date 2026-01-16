@@ -11,7 +11,7 @@ export default function SearchBar({ value, onChange, onSearch, className }) {
         placeholder="Search by ICCID / MSISDN / IMEI"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="flex-1 px-4 py-3 text-sm bg-transparent focus:outline-none text-SMnavy placeholder:text-gray-400"
+        className="flex-1 px-4 py-3 text-[12px] bg-transparent focus:outline-none text-SMnavy placeholder:text-gray-400"
       />
 
       <button onClick={onSearch} className="flex items-center justify-center px-5 py-3 bg-SMnavy hover:bg-SMteal transition-colors" >

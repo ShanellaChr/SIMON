@@ -1,6 +1,81 @@
 import SearchBar from "../components/SearchBar";
 import GeoFilterButton from "../components/GeoFilterButton";
 import { useState } from "react";
+import GeoSimCardTable from "./GeoSimCardTable";
+
+const geoTableData = [
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+  {
+    iccid: "8962010000146613780",
+    msisdn: "6281431226901",
+    imei: "3596667961951801",
+    terminalId: "TRM-9876543210",
+    branch: "Kantor Pusat",
+    geofenceZone: "Jakarta",
+    currentLocation: "Jl. MH Thamrin No. 1, Jakarta Pusat",
+    geofenceStatus: "Within Zone",
+  },
+];
+
 
 export default function GeoFencingWidget() {
   const [searchValue, setSearchValue] = useState("");
@@ -77,15 +152,18 @@ export default function GeoFencingWidget() {
           MAP (Geofence Area)
         </div>
       </div>
-      <div className="mt-2 flex flex-row gap-3">
+      <div className="mt-2 flex flex-row gap-1">
         <SearchBar
           value={searchValue}
           onChange={setSearchValue}
           onSearch={handleSearch}
-          className="w-[400px]"></SearchBar>
+          className="w-[304px] h-9"></SearchBar>
         <GeoFilterButton></GeoFilterButton>
       </div>
-      
+      <div className="mt-2">
+        <GeoSimCardTable data={geoTableData}></GeoSimCardTable>
+      </div>
+
     </div>
   );
 }
