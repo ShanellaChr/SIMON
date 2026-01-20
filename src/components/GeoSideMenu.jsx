@@ -1,0 +1,72 @@
+import { useState } from "react";
+
+ const Province_Data = {
+  "Jabodetabek": ["Kota Adm. Jakarta Pusat", "Kota Adm. Jakarta Barat", "Kota Adm. Jakarta Timur", "Kota Adm. Jakarta Selatan", "Kota Adm. Jakarta Utara", "Kab. Adm. Kepulauan Seribu", "Kab. Bogor", "Kota Bogor", "Kota Depok", "Kab. Bekasi", "Kota Bekasi", "Kab. Tangerang", "Kota Tangerang", "Kota Tangerang Selatan"],
+  "Jawa Barat": ["Kab. Bandung", "Kab. Bandung Barat", "Kab. Bekasi", "Kab. Bogor", "Kab. Ciamis", "Kab. Cianjur", "Kab. Cirebon", "Kab. Garut", "Kab. Indramayu", "Kab. Karawang", "Kab. Kuningan", "Kab. Majalengka", "Kab. Pangandaran", "Kab. Purwakarta", "Kab. Subang", "Kab. Sukabumi", "Kab. Sumedang", "Kab. Tasikmalaya", "Kota Bandung", "Kota Banjar", "Kota Bekasi", "Kota Bogor", "Kota Cimahi", "Kota Cirebon", "Kota Depok", "Kota Sukabumi", "Kota Tasikmalaya"],
+  "Jawa Tengah": ["Kab. Banjarnegara", "Kab. Banyumas", "Kab. Batang", "Kab. Blora", "Kab. Boyolali", "Kab. Brebes", "Kab. Cilacap", "Kab. Demak", "Kab. Grobogan", "Kab. Jepara", "Kab. Karanganyar", "Kab. Kebumen", "Kab. Klaten", "Kab. Kudus", "Kab. Magelang", "Kab. Pati", "Kab. Pekalongan", "Kab. Pemalang", "Kab. Purbalingga", "Kab. Purworejo", "Kab. Rembang", "Kab. Semarang", "Kab. Sragen", "Kab. Sukoharjo", "Kab. Tegal", "Kab. Temanggung", "Kab. Wonogiri", "Kab. Wonosobo", "Kota Magelang", "Kota Pekalongan", "Kota Salatiga", "Kota Semarang", "Kota Surakarta", "Kota Tegal"],
+  "Jawa Timur": ["Kab. Bangkalan", "Kab. Banyuwangi", "Kab. Blitar", "Kab. Bojonegoro", "Kab. Bondowoso", "Kab. Gresik", "Kab. Jember", "Kab. Jombang", "Kab. Kediri", "Kab. Lamongan", "Kab. Lumajang", "Kab. Madiun", "Kab. Magetan", "Kab. Malang", "Kab. Mojokerto", "Kab. Nganjuk", "Kab. Ngawi", "Kab. Pacitan", "Kab. Pamekasan", "Kab. Pasuruan", "Kab. Ponorogo", "Kab. Probolinggo", "Kab. Sampang", "Kab. Sidoarjo", "Kab. Situbondo", "Kab. Sumenep", "Kab. Trenggalek", "Kab. Tuban", "Kab. Tulungagung", "Kota Batu", "Kota Blitar", "Kota Kediri", "Kota Madiun", "Kota Malang", "Kota Mojokerto", "Kota Pasuruan", "Kota Probolinggo", "Kota Surabaya"],
+  "Sumatera Utara": ["Kab. Asahan", "Kab. Batubara", "Kab. Dairi", "Kab. Deli Serdang", "Kab. Humbang Hasundutan", "Kab. Karo", "Kab. Labuhanbatu", "Kab. Labuhanbatu Selatan", "Kab. Labuhanbatu Utara", "Kab. Langkat", "Kab. Mandailing Natal", "Kab. Nias", "Kab. Nias Barat", "Kab. Nias Selatan", "Kab. Nias Utara", "Kab. Padang Lawas", "Kab. Padang Lawas Utara", "Kab. Pakpak Bharat", "Kab. Samosir", "Kab. Serdang Bedagai", "Kab. Simalungun", "Kab. Tapanuli Selatan", "Kab. Tapanuli Tengah", "Kab. Tapanuli Utara", "Kab. Toba", "Kota Binjai", "Kota Gunungsitoli", "Kota Medan", "Kota Padangsidempuan", "Kota Pematangsiantar", "Kota Sibolga", "Kota Tanjungbalai", "Kota Tebing Tinggi"],
+  "Sumatera Barat": ["Kab. Agam", "Kab. Dharmasraya", "Kab. Kepulauan Mentawai", "Kab. Lima Puluh Kota", "Kab. Padang Pariaman", "Kab. Pasaman", "Kab. Pasaman Barat", "Kab. Pesisir Selatan", "Kab. Sijunjung", "Kab. Solok", "Kab. Solok Selatan", "Kab. Tanah Datar", "Kota Bukittinggi", "Kota Padang",],
+}
+
+export default function GeoSideMenu({ onSelectProvince, onSelectCity }) {
+  const [selectedProvince, setSelectedProvince] = useState(null);
+  const [selectedCity, setSelectedCity] = useState(null);
+
+  return (
+    <div className="flex border border-gray-200 rounded-md overflow-hidden bg-white">
+      {/* PROVINCE */}
+      <div className="w-48 border-r">
+        <div className="px-2 py-2 font-bold text-center text-SMnavy">
+          Province
+        </div>
+
+        <div className="max-h-[360px] overflow-y-auto">
+          {Object.keys(Province_Data).map((province) => (
+            <button
+              key={province}
+              onClick={() => {
+                setSelectedProvince(province);
+                setSelectedCity(null);
+                onSelectProvince?.(province);
+              }}
+              className={`w-full text-left px-2 py-2 text-[12px] border-b
+                ${selectedProvince === province
+                  ? "bg-SMaqua font-semibold"
+                  : "hover:bg-gray-100"}`}
+            >
+              {province}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* CITY */}
+      {selectedProvince && (
+        <div className="w-56 border-r">
+          <div className="px-2 py-2 font-bold text-SMnavy text-center">
+            {selectedProvince}
+          </div>
+
+          <div className="max-h-[360px] overflow-y-auto">
+            {Province_Data[selectedProvince].map((city) => (
+              <button
+                key={city}
+                onClick={() => {
+                  setSelectedCity(city);
+                  onSelectCity?.(city);
+                }}
+                className={`w-full text-left px-2 py-2 text-[12px] border-b
+                  ${selectedCity === city
+                    ? "bg-SMnavy text-SMcream"
+                    : "hover:bg-gray-100"}`}
+              >
+                {city}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
