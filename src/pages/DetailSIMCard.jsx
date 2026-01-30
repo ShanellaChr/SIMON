@@ -4,6 +4,7 @@ import SIMCardHeadUnit from "../components/SIMCardHeadUnit";
 import Backdrop from "../components/Backdrop";
 import DataTable from "../components/DataTable";
 import UsageTrends from "../components/UsageTrends";
+import { useNavigate } from "react-router-dom";
 
 
 const headData = {
@@ -42,10 +43,11 @@ const imeiLogData = [
 
 
 export default function DetailSIMCard() {
+    const navigate = useNavigate();
     return (
         <MainLayout>
             <div className="relative flex items-center justify-center mt-2">
-                <button type="button" className="absolute left-0 flex items-center h-8 bg-SMnavy text-SMcream rounded-md px-3 text-[16px] font-bold">
+                <button type="button" className="absolute left-0 flex items-center h-8 bg-SMnavy text-SMcream rounded-md px-3 text-[16px] font-bold" onClick={() => navigate(-1)}>
                     <img src={arrowBackIcon} alt="backIcon" className="mr-1 h-4" />
                     Back
                 </button>

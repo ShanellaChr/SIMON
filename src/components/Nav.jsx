@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import MonitoringIcon from "../assets/navIcon/monitoringIcon.svg";
 import AnalyticsIcon from "../assets/navIcon/analyticsIcon.svg";
@@ -8,6 +9,7 @@ import LogoutIcon from "../assets/navIcon/logoutIcon.svg";
 import ChevronDown from "../assets/navIcon/chevronDown.svg";
 
 export default function Nav() {
+  const navigate = useNavigate();
   const [openMonitoring, setOpenMonitoring] = useState(false);
   const [openAnalytics, setOpenAnalytics] = useState(false);
   const [activeItem, setActiveItem] = useState("");
@@ -49,23 +51,21 @@ export default function Nav() {
 
           {openMonitoring && (
             <div className="ml-8 mt-3 flex flex-col gap-3">
-              <a
-                href="/summary"
-                onClick={() => setActiveItem("Summary")}
-                className={`font-18 font-semibold hover:text-SMaqua ${activeItem === "Summary" ? "text-SMaqua" : "text-SMcream"
+              <div
+                onClick={() => { navigate('/monitoring-summary'); setActiveItem("Summary"); }}
+                className={`font-18 font-semibold hover:text-SMaqua cursor-pointer ${activeItem === "Summary" ? "text-SMaqua" : "text-SMcream"
                   }`}
               >
                 Summary
-              </a>
+              </div>
 
-              <a
-                href="/geo"
-                onClick={() => setActiveItem("Geo")}
-                className={`font-18 font-semibold hover:text-SMaqua ${activeItem === "Geo" ? "text-SMaqua" : "text-SMcream"
+              <div
+                onClick={() => { navigate('/geo'); setActiveItem("Geo"); }}
+                className={`font-18 font-semibold hover:text-SMaqua cursor-pointer ${activeItem === "Geo" ? "text-SMaqua" : "text-SMcream"
                   }`}
               >
                 Geo
-              </a>
+              </div>
             </div>
           )}
         </div>
@@ -93,60 +93,56 @@ export default function Nav() {
 
           {openAnalytics && (
             <div className="ml-8 mt-3 flex flex-col gap-3">
-              <a
-                href="/signal-strength"
-                onClick={() => setActiveItem("Signal Strength")}
-                className={`font-18 font-semibold hover:text-SMaqua ${activeItem === "Signal Strength"
+              <div
+                onClick={() => { navigate('/coba1'); setActiveItem("Signal Strength"); }}
+                className={`font-18 font-semibold hover:text-SMaqua cursor-pointer ${activeItem === "Signal Strength"
                     ? "text-SMaqua"
                     : "text-SMcream"
                   }`}
               >
                 Signal Strength
-              </a>
+              </div>
 
-              <a
-                href="/quota-usage"
-                onClick={() => setActiveItem("Quota Usage")}
-                className={`font-18 font-semibold hover:text-SMaqua ${activeItem === "Quota Usage"
+              <div
+                onClick={() => { navigate('/coba2'); setActiveItem("Quota Usage"); }}
+                className={`font-18 font-semibold hover:text-SMaqua cursor-pointer ${activeItem === "Quota Usage"
                     ? "text-SMaqua"
                     : "text-SMcream"
                   }`}
               >
                 Quota Usage Anomaly
-              </a>
+              </div>
             </div>
           )}
         </div>
 
         {/* REPORT */}
-        <a
-          href="/report"
-          onClick={() => setActiveItem("Report")}
+        <div
+          onClick={() => { navigate('/report'); setActiveItem("Report"); }}
           className={`flex items-center gap-3 font-20 font-bold cursor-pointer hover:text-SMaqua ${activeClass(
             "Report"
           )}`}
         >
           <img src={ReportIcon} className="h-5 w-5" />
           Report
-        </a>
+        </div>
 
         {/* SIM CARD */}
-        <a
-          href="/simcard"
-          onClick={() => setActiveItem("SIM Card")}
+        <div
+          onClick={() => { navigate('/simcard'); setActiveItem("SIM Card"); }}
           className={`flex items-center gap-3 font-20 font-bold cursor-pointer hover:text-SMaqua ${activeClass(
             "SIM Card"
           )}`}
         >
           <img src={SimCardIcon} className="h-5 w-5" />
           SIM Card
-        </a>
+        </div>
       </nav>
 
       {/* LOGOUT */}
       <div className="mt-auto pt-6">
         <div
-          onClick={() => setActiveItem("Logout")}
+          onClick={() => { navigate('/'); setActiveItem("Logout"); }}
           className={`flex items-center gap-3 cursor-pointer font-20 font-bold hover:text-SMaqua ${activeClass("Logout")}`}
         >
           <img src={LogoutIcon} className="h-5 w-5" />

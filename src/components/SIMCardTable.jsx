@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SimCardTable({ data = [], rowsPerPageOptions = [10, 20, 50] }) {
 
+  const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(20);
 
@@ -74,7 +76,7 @@ export default function SimCardTable({ data = [], rowsPerPageOptions = [10, 20, 
                 <td className="px-2 py-2 text-center">
                   <div className="flex justify-center">
                     <button
-                    //   onClick={() => router.push("/DetailSIMCard")}
+                      onClick={() => navigate('/detailsimcard')}
                       className="px-6 py-1 rounded-l-md bg-SMaqua text-SMnavy text-[12px] font-semibold shadow"
                     >
                       Detail
