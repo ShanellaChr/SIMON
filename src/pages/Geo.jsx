@@ -37,7 +37,6 @@ export default function Geo() {
       {/* BACKDROP CONTENT */}
       <Backdrop className="rounded-t-none -mt-1.5">
         {activeTab === "geofencing" ? (<GeoFencingWidget />) : (<GeoLocationWidget />)}
-      
       </Backdrop>
     </MainLayout>
   );
