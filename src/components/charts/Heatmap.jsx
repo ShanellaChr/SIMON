@@ -2,12 +2,12 @@ import {HeatmapCell} from './HeatmapCell.jsx';
 
 export default function Heatmap({ columns = [], rows = [] }) {
   const gridStyle = {
-    gridTemplateColumns: `80px repeat(${columns.length}, minmax(90px, 1fr))`,
+    gridTemplateColumns: `75px repeat(${columns.length}, minmax(90px, 1fr))`,
   };
 
   return (
     <div className="w-full overflow-x-auto">
-      <div className="grid gap-0.5 bg-SMnavy-100" style={gridStyle}>
+      <div className="grid gap-0.5 bg-SMcream" style={gridStyle}>
         
         {/* EMPTY CORNER */}
         <div className="bg-white" />
@@ -35,7 +35,7 @@ export default function Heatmap({ columns = [], rows = [] }) {
 
             {/* CELLS */}
             {row.cells.map((cell, i) => (
-              <HeatmapCell key={i} cell={cell} />
+              <HeatmapCell key={i} cell={cell}/>
             ))}
           </>
         ))}
